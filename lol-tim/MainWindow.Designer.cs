@@ -315,7 +315,7 @@
             this.panelTOP.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTOP.Location = new System.Drawing.Point(130, 0);
             this.panelTOP.Name = "panelTOP";
-            this.panelTOP.Size = new System.Drawing.Size(509, 80);
+            this.panelTOP.Size = new System.Drawing.Size(477, 80);
             this.panelTOP.TabIndex = 1;
             // 
             // labelACTUALCDRTOP
@@ -329,6 +329,7 @@
             // 
             // comboBoxSST2TYPETOP
             // 
+            this.comboBoxSST2TYPETOP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST2TYPETOP.FormattingEnabled = true;
             this.comboBoxSST2TYPETOP.Location = new System.Drawing.Point(164, 43);
             this.comboBoxSST2TYPETOP.Name = "comboBoxSST2TYPETOP";
@@ -339,6 +340,7 @@
             // 
             // comboBoxSST1TYPETOP
             // 
+            this.comboBoxSST1TYPETOP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST1TYPETOP.FormattingEnabled = true;
             this.comboBoxSST1TYPETOP.Location = new System.Drawing.Point(164, 10);
             this.comboBoxSST1TYPETOP.Name = "comboBoxSST1TYPETOP";
@@ -369,6 +371,7 @@
             // 
             // comboBoxCDRTOPCHANGE
             // 
+            this.comboBoxCDRTOPCHANGE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCDRTOPCHANGE.FormattingEnabled = true;
             this.comboBoxCDRTOPCHANGE.Items.AddRange(new object[] {
             "0%",
@@ -522,7 +525,7 @@
             this.panelJUNGLE.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelJUNGLE.Location = new System.Drawing.Point(130, 80);
             this.panelJUNGLE.Name = "panelJUNGLE";
-            this.panelJUNGLE.Size = new System.Drawing.Size(509, 80);
+            this.panelJUNGLE.Size = new System.Drawing.Size(477, 80);
             this.panelJUNGLE.TabIndex = 2;
             // 
             // labelACTUALCDRJUNGLE
@@ -536,6 +539,7 @@
             // 
             // comboBoxSST2TYPEJUNGLE
             // 
+            this.comboBoxSST2TYPEJUNGLE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST2TYPEJUNGLE.FormattingEnabled = true;
             this.comboBoxSST2TYPEJUNGLE.Location = new System.Drawing.Point(164, 46);
             this.comboBoxSST2TYPEJUNGLE.Name = "comboBoxSST2TYPEJUNGLE";
@@ -546,6 +550,7 @@
             // 
             // comboBoxSST1TYPEJUNGLE
             // 
+            this.comboBoxSST1TYPEJUNGLE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST1TYPEJUNGLE.FormattingEnabled = true;
             this.comboBoxSST1TYPEJUNGLE.Location = new System.Drawing.Point(164, 13);
             this.comboBoxSST1TYPEJUNGLE.Name = "comboBoxSST1TYPEJUNGLE";
@@ -562,6 +567,7 @@
             this.buttonSST2JUNGLERESET.TabIndex = 21;
             this.buttonSST2JUNGLERESET.Text = "RESET";
             this.buttonSST2JUNGLERESET.UseVisualStyleBackColor = true;
+            this.buttonSST2JUNGLERESET.Click += new System.EventHandler(this.ButtonSST2JUNGLERESET_Click);
             // 
             // buttonSST2JUNGLESTART
             // 
@@ -571,6 +577,7 @@
             this.buttonSST2JUNGLESTART.TabIndex = 22;
             this.buttonSST2JUNGLESTART.Text = "START";
             this.buttonSST2JUNGLESTART.UseVisualStyleBackColor = true;
+            this.buttonSST2JUNGLESTART.Click += new System.EventHandler(this.ButtonSST2JUNGLESTART_Click);
             // 
             // buttonSST1JUNGLESTART
             // 
@@ -580,6 +587,7 @@
             this.buttonSST1JUNGLESTART.TabIndex = 20;
             this.buttonSST1JUNGLESTART.Text = "START";
             this.buttonSST1JUNGLESTART.UseVisualStyleBackColor = true;
+            this.buttonSST1JUNGLESTART.Click += new System.EventHandler(this.ButtonSST1JUNGLESTART_Click);
             // 
             // buttonSST1JUNGLERESET
             // 
@@ -589,6 +597,7 @@
             this.buttonSST1JUNGLERESET.TabIndex = 19;
             this.buttonSST1JUNGLERESET.Text = "RESET";
             this.buttonSST1JUNGLERESET.UseVisualStyleBackColor = true;
+            this.buttonSST1JUNGLERESET.Click += new System.EventHandler(this.ButtonSST1JUNGLERESET_Click);
             // 
             // labelSST2TYPEJUNGLE
             // 
@@ -612,13 +621,14 @@
             // 
             // comboBoxCDRJUNGLECHANGE
             // 
+            this.comboBoxCDRJUNGLECHANGE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCDRJUNGLECHANGE.FormattingEnabled = true;
             this.comboBoxCDRJUNGLECHANGE.Items.AddRange(new object[] {
             "0%",
             "5%",
             "25%",
             "30%"});
-            this.comboBoxCDRJUNGLECHANGE.Location = new System.Drawing.Point(52, 40);
+            this.comboBoxCDRJUNGLECHANGE.Location = new System.Drawing.Point(50, 45);
             this.comboBoxCDRJUNGLECHANGE.Name = "comboBoxCDRJUNGLECHANGE";
             this.comboBoxCDRJUNGLECHANGE.Size = new System.Drawing.Size(53, 27);
             this.comboBoxCDRJUNGLECHANGE.TabIndex = 15;
@@ -634,6 +644,7 @@
             this.checkBoxSHOESJUNGLE.TabIndex = 13;
             this.checkBoxSHOESJUNGLE.Text = "Shoes";
             this.checkBoxSHOESJUNGLE.UseVisualStyleBackColor = true;
+            this.checkBoxSHOESJUNGLE.CheckedChanged += new System.EventHandler(this.CheckBoxSHOESJUNGLE_CheckedChanged);
             // 
             // labelSST2JUNGLETIME
             // 
@@ -674,17 +685,18 @@
             // labelCDRPERCENTJUNGLE
             // 
             this.labelCDRPERCENTJUNGLE.AutoSize = true;
-            this.labelCDRPERCENTJUNGLE.Location = new System.Drawing.Point(48, 40);
+            this.labelCDRPERCENTJUNGLE.Location = new System.Drawing.Point(48, 48);
             this.labelCDRPERCENTJUNGLE.Name = "labelCDRPERCENTJUNGLE";
             this.labelCDRPERCENTJUNGLE.Size = new System.Drawing.Size(32, 19);
             this.labelCDRPERCENTJUNGLE.TabIndex = 3;
             this.labelCDRPERCENTJUNGLE.Text = "0%";
+            this.labelCDRPERCENTJUNGLE.TextChanged += new System.EventHandler(this.LabelCDRPERCENTJUNGLE_TextChanged);
             this.labelCDRPERCENTJUNGLE.DoubleClick += new System.EventHandler(this.LabelCDRPERCENTJUNGLE_DoubleClick);
             // 
             // labelCDRJUNGLE
             // 
             this.labelCDRJUNGLE.AutoSize = true;
-            this.labelCDRJUNGLE.Location = new System.Drawing.Point(3, 40);
+            this.labelCDRJUNGLE.Location = new System.Drawing.Point(3, 48);
             this.labelCDRJUNGLE.Name = "labelCDRJUNGLE";
             this.labelCDRJUNGLE.Size = new System.Drawing.Size(47, 19);
             this.labelCDRJUNGLE.TabIndex = 2;
@@ -723,7 +735,7 @@
             this.panelMID.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMID.Location = new System.Drawing.Point(130, 160);
             this.panelMID.Name = "panelMID";
-            this.panelMID.Size = new System.Drawing.Size(509, 80);
+            this.panelMID.Size = new System.Drawing.Size(477, 80);
             this.panelMID.TabIndex = 3;
             // 
             // labelACTUALCDRMID
@@ -737,6 +749,7 @@
             // 
             // comboBoxSST2TYPEMID
             // 
+            this.comboBoxSST2TYPEMID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST2TYPEMID.FormattingEnabled = true;
             this.comboBoxSST2TYPEMID.Location = new System.Drawing.Point(164, 45);
             this.comboBoxSST2TYPEMID.Name = "comboBoxSST2TYPEMID";
@@ -747,6 +760,7 @@
             // 
             // comboBoxSST1TYPEMID
             // 
+            this.comboBoxSST1TYPEMID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST1TYPEMID.FormattingEnabled = true;
             this.comboBoxSST1TYPEMID.Location = new System.Drawing.Point(164, 12);
             this.comboBoxSST1TYPEMID.Name = "comboBoxSST1TYPEMID";
@@ -813,6 +827,7 @@
             // 
             // comboBoxCDRMIDCHANGE
             // 
+            this.comboBoxCDRMIDCHANGE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCDRMIDCHANGE.FormattingEnabled = true;
             this.comboBoxCDRMIDCHANGE.Items.AddRange(new object[] {
             "0%",
@@ -924,7 +939,7 @@
             this.panelADC.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelADC.Location = new System.Drawing.Point(130, 240);
             this.panelADC.Name = "panelADC";
-            this.panelADC.Size = new System.Drawing.Size(509, 80);
+            this.panelADC.Size = new System.Drawing.Size(477, 80);
             this.panelADC.TabIndex = 4;
             // 
             // labelACTUALCDRADC
@@ -938,6 +953,7 @@
             // 
             // comboBoxSST2TYPEADC
             // 
+            this.comboBoxSST2TYPEADC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST2TYPEADC.FormattingEnabled = true;
             this.comboBoxSST2TYPEADC.Location = new System.Drawing.Point(164, 51);
             this.comboBoxSST2TYPEADC.Name = "comboBoxSST2TYPEADC";
@@ -948,6 +964,7 @@
             // 
             // comboBoxSST1TYPEADC
             // 
+            this.comboBoxSST1TYPEADC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST1TYPEADC.FormattingEnabled = true;
             this.comboBoxSST1TYPEADC.Location = new System.Drawing.Point(164, 18);
             this.comboBoxSST1TYPEADC.Name = "comboBoxSST1TYPEADC";
@@ -1014,6 +1031,7 @@
             // 
             // comboBoxCDRADCCHANGE
             // 
+            this.comboBoxCDRADCCHANGE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCDRADCCHANGE.FormattingEnabled = true;
             this.comboBoxCDRADCCHANGE.Items.AddRange(new object[] {
             "0%",
@@ -1125,7 +1143,7 @@
             this.panelSUPPORT.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSUPPORT.Location = new System.Drawing.Point(130, 320);
             this.panelSUPPORT.Name = "panelSUPPORT";
-            this.panelSUPPORT.Size = new System.Drawing.Size(509, 80);
+            this.panelSUPPORT.Size = new System.Drawing.Size(477, 80);
             this.panelSUPPORT.TabIndex = 5;
             // 
             // labelACTUALCDRSUPPORT
@@ -1139,6 +1157,7 @@
             // 
             // comboBoxSST2TYPESUPPORT
             // 
+            this.comboBoxSST2TYPESUPPORT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST2TYPESUPPORT.FormattingEnabled = true;
             this.comboBoxSST2TYPESUPPORT.Location = new System.Drawing.Point(164, 50);
             this.comboBoxSST2TYPESUPPORT.Name = "comboBoxSST2TYPESUPPORT";
@@ -1149,6 +1168,7 @@
             // 
             // comboBoxSST1TYPESUPPORT
             // 
+            this.comboBoxSST1TYPESUPPORT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSST1TYPESUPPORT.FormattingEnabled = true;
             this.comboBoxSST1TYPESUPPORT.Location = new System.Drawing.Point(164, 18);
             this.comboBoxSST1TYPESUPPORT.Name = "comboBoxSST1TYPESUPPORT";
@@ -1215,6 +1235,7 @@
             // 
             // comboBoxCDRSUPPORTCHANGE
             // 
+            this.comboBoxCDRSUPPORTCHANGE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCDRSUPPORTCHANGE.FormattingEnabled = true;
             this.comboBoxCDRSUPPORTCHANGE.Items.AddRange(new object[] {
             "0%",
@@ -1321,10 +1342,12 @@
             // timerSST1JUNGLE
             // 
             this.timerSST1JUNGLE.Interval = 1000;
+            this.timerSST1JUNGLE.Tick += new System.EventHandler(this.TimerSST1JUNGLE_Tick);
             // 
             // timerSST2JUNGLE
             // 
             this.timerSST2JUNGLE.Interval = 1000;
+            this.timerSST2JUNGLE.Tick += new System.EventHandler(this.TimerSST2JUNGLE_Tick);
             // 
             // timerSST1MID
             // 
@@ -1354,7 +1377,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(639, 400);
+            this.ClientSize = new System.Drawing.Size(607, 400);
             this.Controls.Add(this.panelSUPPORT);
             this.Controls.Add(this.panelADC);
             this.Controls.Add(this.panelMID);
