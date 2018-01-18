@@ -503,5 +503,314 @@ namespace lol_tim
             }
 
         }
+
+        //MID
+
+        private void TimerSST1MID_Tick(object sender, EventArgs e)
+        {
+            if (timeLeftSST1MID > 0)
+            {
+                timeLeftSST1MID = timeLeftSST1MID - 1;
+                labelSST1MIDTIME.Text = timeLeftSST1MID.ToString();
+
+                if (timeLeftSST1MID < 15)
+                    labelSST1MIDTIME.ForeColor = Color.Red;
+            }
+            else
+            {
+                timerSST1MID.Stop();
+            }
+        }
+
+        private void ButtonSST1MIDSTART_Click(object sender, EventArgs e)
+        {
+            timeLeftSST1MID = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST1TYPEMID.Text).Value * MIDACTUALCDR);
+            labelSST1MIDTIME.Text = timeLeftSST1MID.ToString();
+            timerSST1MID.Start();
+        }
+
+        private void ButtonSST1MIDRESET_Click(object sender, EventArgs e)
+        {
+            timerSST1MID.Stop();
+            timeLeftSST1MID = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST1TYPEMID.Text).Value * MIDACTUALCDR);
+            labelSST1MIDTIME.Text = "0";
+            labelSST1MIDTIME.ForeColor = Color.Black;
+        }
+
+        private void TimerSST2MID_Tick(object sender, EventArgs e)
+        {
+            if (timeLeftSST2MID > 0)
+            {
+                timeLeftSST2MID = timeLeftSST2MID - 1;
+                labelSST2MIDTIME.Text = timeLeftSST2MID.ToString();
+
+                if (timeLeftSST2MID < 15)
+                    labelSST2MIDTIME.ForeColor = Color.Red;
+            }
+            else
+            {
+                timerSST2MID.Stop();
+            }
+        }
+
+        private void ButtonSST2MIDSTART_Click(object sender, EventArgs e)
+        {
+            timeLeftSST2MID = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST2TYPEMID.Text).Value * MIDACTUALCDR);
+            labelSST2MIDTIME.Text = timeLeftSST2MID.ToString();
+            timerSST2MID.Start();
+        }
+
+        private void ButtonSST2MIDRESET_Click(object sender, EventArgs e)
+        {
+            timerSST2MID.Stop();
+            timeLeftSST2MID = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST2TYPEMID.Text).Value * MIDACTUALCDR);
+            labelSST2MIDTIME.Text = "0";
+            labelSST2MIDTIME.ForeColor = Color.Black;
+        }
+
+        private void LabelCDRPERCENTMID_TextChanged(object sender, EventArgs e)
+        {
+            if (labelCDRPERCENTMID.Text == "0%")
+            {
+                MIDACTUALCDR = 1.0 - (checkBoxSHOESMID.Checked ? 0.1 : 0.0);
+                labelACTUALCDRMID.Text = MIDACTUALCDR.ToString();
+            }
+            else if (labelCDRPERCENTMID.Text == "5%")
+            {
+                MIDACTUALCDR = 1.0 - 0.05 - (checkBoxSHOESMID.Checked ? 0.1 : 0.0);
+                labelACTUALCDRMID.Text = MIDACTUALCDR.ToString();
+            }
+            else if (labelCDRPERCENTMID.Text == "25%")
+            {
+                MIDACTUALCDR = 1.0 - 0.25 - (checkBoxSHOESMID.Checked ? 0.1 : 0.0);
+                labelACTUALCDRMID.Text = MIDACTUALCDR.ToString();
+            }
+            else if (labelCDRPERCENTMID.Text == "30%")
+            {
+                MIDACTUALCDR = 1.0 - 0.3 - (checkBoxSHOESMID.Checked ? 0.1 : 0.0);
+                labelACTUALCDRMID.Text = MIDACTUALCDR.ToString();
+            }
+        }
+
+        private void CheckBoxSHOESMID_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSHOESMID.Checked)
+            {
+                MIDACTUALCDR -= shoesCDR;
+                labelACTUALCDRMID.Text = MIDACTUALCDR.ToString();
+            }
+            else
+            {
+                MIDACTUALCDR += shoesCDR;
+                labelACTUALCDRMID.Text = MIDACTUALCDR.ToString();
+            }
+
+        }
+
+        //ADC
+
+        private void TimerSST1ADC_Tick(object sender, EventArgs e)
+        {
+            if (timeLeftSST1ADC > 0)
+            {
+                timeLeftSST1ADC = timeLeftSST1ADC - 1;
+                labelSST1ADCTIME.Text = timeLeftSST1ADC.ToString();
+
+                if (timeLeftSST1ADC < 15)
+                    labelSST1ADCTIME.ForeColor = Color.Red;
+            }
+            else
+            {
+                timerSST1ADC.Stop();
+            }
+        }
+
+        private void ButtonSST1ADCSTART_Click(object sender, EventArgs e)
+        {
+            timeLeftSST1ADC = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST1TYPEADC.Text).Value * ADCACTUALCDR);
+            labelSST1ADCTIME.Text = timeLeftSST1ADC.ToString();
+            timerSST1ADC.Start();
+        }
+
+        private void ButtonSST1ADCRESET_Click(object sender, EventArgs e)
+        {
+            timerSST1ADC.Stop();
+            timeLeftSST1ADC = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST1TYPEADC.Text).Value * ADCACTUALCDR);
+            labelSST1ADCTIME.Text = "0";
+            labelSST1ADCTIME.ForeColor = Color.Black;
+        }
+
+        private void TimerSST2ADC_Tick(object sender, EventArgs e)
+        {
+            if (timeLeftSST2ADC > 0)
+            {
+                timeLeftSST2ADC = timeLeftSST2ADC - 1;
+                labelSST2ADCTIME.Text = timeLeftSST2ADC.ToString();
+
+                if (timeLeftSST2ADC < 15)
+                    labelSST2ADCTIME.ForeColor = Color.Red;
+            }
+            else
+            {
+                timerSST2ADC.Stop();
+            }
+        }
+
+        private void ButtonSST2ADCSTART_Click(object sender, EventArgs e)
+        {
+            timeLeftSST2ADC = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST2TYPEADC.Text).Value * ADCACTUALCDR);
+            labelSST2ADCTIME.Text = timeLeftSST2ADC.ToString();
+            timerSST2ADC.Start();
+        }
+
+        private void ButtonSST2ADCRESET_Click(object sender, EventArgs e)
+        {
+            timerSST2ADC.Stop();
+            timeLeftSST2ADC = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST2TYPEADC.Text).Value * ADCACTUALCDR);
+            labelSST2ADCTIME.Text = "0";
+            labelSST2ADCTIME.ForeColor = Color.Black;
+        }
+
+        private void LabelCDRPERCENTADC_TextChanged(object sender, EventArgs e)
+        {
+            if (labelCDRPERCENTADC.Text == "0%")
+            {
+                ADCACTUALCDR = 1.0 - (checkBoxSHOESADC.Checked ? 0.1 : 0.0);
+                labelACTUALCDRADC.Text = ADCACTUALCDR.ToString();
+            }
+            else if (labelCDRPERCENTADC.Text == "5%")
+            {
+                ADCACTUALCDR = 1.0 - 0.05 - (checkBoxSHOESADC.Checked ? 0.1 : 0.0);
+                labelACTUALCDRADC.Text = ADCACTUALCDR.ToString();
+            }
+            else if (labelCDRPERCENTADC.Text == "25%")
+            {
+                ADCACTUALCDR = 1.0 - 0.25 - (checkBoxSHOESADC.Checked ? 0.1 : 0.0);
+                labelACTUALCDRADC.Text = ADCACTUALCDR.ToString();
+            }
+            else if (labelCDRPERCENTADC.Text == "30%")
+            {
+                ADCACTUALCDR = 1.0 - 0.3 - (checkBoxSHOESADC.Checked ? 0.1 : 0.0);
+                labelACTUALCDRADC.Text = ADCACTUALCDR.ToString();
+            }
+        }
+
+        private void CheckBoxSHOESADC_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSHOESADC.Checked)
+            {
+                ADCACTUALCDR -= shoesCDR;
+                labelACTUALCDRADC.Text = ADCACTUALCDR.ToString();
+            }
+            else
+            {
+                ADCACTUALCDR += shoesCDR;
+                labelACTUALCDRADC.Text = ADCACTUALCDR.ToString();
+            }
+
+        }
+
+        //SUPPORT
+
+        private void TimerSST1SUPPORT_Tick(object sender, EventArgs e)
+        {
+            if (timeLeftSST1SUPPORT > 0)
+            {
+                timeLeftSST1SUPPORT = timeLeftSST1SUPPORT - 1;
+                labelSST1SUPPORTTIME.Text = timeLeftSST1SUPPORT.ToString();
+
+                if (timeLeftSST1SUPPORT < 15)
+                    labelSST1SUPPORTTIME.ForeColor = Color.Red;
+            }
+            else
+            {
+                timerSST1SUPPORT.Stop();
+            }
+        }
+
+        private void ButtonSST1SUPPORTSTART_Click(object sender, EventArgs e)
+        {
+            timeLeftSST1SUPPORT = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST1TYPESUPPORT.Text).Value * SUPPORTACTUALCDR);
+            labelSST1SUPPORTTIME.Text = timeLeftSST1SUPPORT.ToString();
+            timerSST1SUPPORT.Start();
+        }
+
+        private void ButtonSST1SUPPORTRESET_Click(object sender, EventArgs e)
+        {
+            timerSST1SUPPORT.Stop();
+            timeLeftSST1SUPPORT = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST1TYPESUPPORT.Text).Value * SUPPORTACTUALCDR);
+            labelSST1SUPPORTTIME.Text = "0";
+            labelSST1SUPPORTTIME.ForeColor = Color.Black;
+        }
+
+        private void TimerSST2SUPPORT_Tick(object sender, EventArgs e)
+        {
+            if (timeLeftSST2SUPPORT > 0)
+            {
+                timeLeftSST2SUPPORT = timeLeftSST2SUPPORT - 1;
+                labelSST2SUPPORTTIME.Text = timeLeftSST2SUPPORT.ToString();
+
+                if (timeLeftSST2SUPPORT < 15)
+                    labelSST2SUPPORTTIME.ForeColor = Color.Red;
+            }
+            else
+            {
+                timerSST2SUPPORT.Stop();
+            }
+        }
+
+        private void ButtonSST2SUPPORTSTART_Click(object sender, EventArgs e)
+        {
+            timeLeftSST2SUPPORT = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST2TYPESUPPORT.Text).Value * SUPPORTACTUALCDR);
+            labelSST2SUPPORTTIME.Text = timeLeftSST2SUPPORT.ToString();
+            timerSST2SUPPORT.Start();
+        }
+
+        private void ButtonSST2SUPPORTRESET_Click(object sender, EventArgs e)
+        {
+            timerSST2SUPPORT.Stop();
+            timeLeftSST2SUPPORT = (int)((double)spells.FirstOrDefault(t => t.Key == labelSST2TYPESUPPORT.Text).Value * SUPPORTACTUALCDR);
+            labelSST2SUPPORTTIME.Text = "0";
+            labelSST2SUPPORTTIME.ForeColor = Color.Black;
+        }
+
+        private void LabelCDRPERCENTSUPPORT_TextChanged(object sender, EventArgs e)
+        {
+            if (labelCDRPERCENTSUPPORT.Text == "0%")
+            {
+                SUPPORTACTUALCDR = 1.0 - (checkBoxSHOESSUPPORT.Checked ? 0.1 : 0.0);
+                labelACTUALCDRSUPPORT.Text = SUPPORTACTUALCDR.ToString();
+            }
+            else if (labelCDRPERCENTSUPPORT.Text == "5%")
+            {
+                SUPPORTACTUALCDR = 1.0 - 0.05 - (checkBoxSHOESSUPPORT.Checked ? 0.1 : 0.0);
+                labelACTUALCDRSUPPORT.Text = SUPPORTACTUALCDR.ToString();
+            }
+            else if (labelCDRPERCENTSUPPORT.Text == "25%")
+            {
+                SUPPORTACTUALCDR = 1.0 - 0.25 - (checkBoxSHOESSUPPORT.Checked ? 0.1 : 0.0);
+                labelACTUALCDRSUPPORT.Text = SUPPORTACTUALCDR.ToString();
+            }
+            else if (labelCDRPERCENTSUPPORT.Text == "30%")
+            {
+                SUPPORTACTUALCDR = 1.0 - 0.3 - (checkBoxSHOESSUPPORT.Checked ? 0.1 : 0.0);
+                labelACTUALCDRSUPPORT.Text = SUPPORTACTUALCDR.ToString();
+            }
+        }
+
+        private void CheckBoxSHOESSUPPORT_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSHOESSUPPORT.Checked)
+            {
+                SUPPORTACTUALCDR -= shoesCDR;
+                labelACTUALCDRSUPPORT.Text = SUPPORTACTUALCDR.ToString();
+            }
+            else
+            {
+                SUPPORTACTUALCDR += shoesCDR;
+                labelACTUALCDRSUPPORT.Text = SUPPORTACTUALCDR.ToString();
+            }
+
+        }
     }
 }

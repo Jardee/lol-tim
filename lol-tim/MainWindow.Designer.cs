@@ -777,6 +777,7 @@
             this.buttonSST2MIDRESET.TabIndex = 21;
             this.buttonSST2MIDRESET.Text = "RESET";
             this.buttonSST2MIDRESET.UseVisualStyleBackColor = true;
+            this.buttonSST2MIDRESET.Click += new System.EventHandler(this.ButtonSST2MIDRESET_Click);
             // 
             // buttonSST2MIDSTART
             // 
@@ -786,6 +787,7 @@
             this.buttonSST2MIDSTART.TabIndex = 22;
             this.buttonSST2MIDSTART.Text = "START";
             this.buttonSST2MIDSTART.UseVisualStyleBackColor = true;
+            this.buttonSST2MIDSTART.Click += new System.EventHandler(this.ButtonSST2MIDSTART_Click);
             // 
             // buttonSST1MIDSTART
             // 
@@ -795,6 +797,7 @@
             this.buttonSST1MIDSTART.TabIndex = 20;
             this.buttonSST1MIDSTART.Text = "START";
             this.buttonSST1MIDSTART.UseVisualStyleBackColor = true;
+            this.buttonSST1MIDSTART.Click += new System.EventHandler(this.ButtonSST1MIDSTART_Click);
             // 
             // buttonSST1MIDRESET
             // 
@@ -804,6 +807,7 @@
             this.buttonSST1MIDRESET.TabIndex = 19;
             this.buttonSST1MIDRESET.Text = "RESET";
             this.buttonSST1MIDRESET.UseVisualStyleBackColor = true;
+            this.buttonSST1MIDRESET.Click += new System.EventHandler(this.ButtonSST1MIDRESET_Click);
             // 
             // labelSST2TYPEMID
             // 
@@ -834,7 +838,7 @@
             "5%",
             "25%",
             "30%"});
-            this.comboBoxCDRMIDCHANGE.Location = new System.Drawing.Point(52, 45);
+            this.comboBoxCDRMIDCHANGE.Location = new System.Drawing.Point(50, 43);
             this.comboBoxCDRMIDCHANGE.Name = "comboBoxCDRMIDCHANGE";
             this.comboBoxCDRMIDCHANGE.Size = new System.Drawing.Size(53, 27);
             this.comboBoxCDRMIDCHANGE.TabIndex = 15;
@@ -850,6 +854,7 @@
             this.checkBoxSHOESMID.TabIndex = 13;
             this.checkBoxSHOESMID.Text = "Shoes";
             this.checkBoxSHOESMID.UseVisualStyleBackColor = true;
+            this.checkBoxSHOESMID.CheckedChanged += new System.EventHandler(this.CheckBoxSHOESMID_CheckedChanged);
             // 
             // labelSST2MIDTIME
             // 
@@ -895,6 +900,7 @@
             this.labelCDRPERCENTMID.Size = new System.Drawing.Size(32, 19);
             this.labelCDRPERCENTMID.TabIndex = 4;
             this.labelCDRPERCENTMID.Text = "0%";
+            this.labelCDRPERCENTMID.TextChanged += new System.EventHandler(this.LabelCDRPERCENTMID_TextChanged);
             this.labelCDRPERCENTMID.DoubleClick += new System.EventHandler(this.LabelCDRPERCENTMID_DoubleClick);
             // 
             // labelCDRMID
@@ -981,6 +987,7 @@
             this.buttonSST2ADCRESET.TabIndex = 21;
             this.buttonSST2ADCRESET.Text = "RESET";
             this.buttonSST2ADCRESET.UseVisualStyleBackColor = true;
+            this.buttonSST2ADCRESET.Click += new System.EventHandler(this.ButtonSST2ADCRESET_Click);
             // 
             // buttonSST2ADCSTART
             // 
@@ -990,6 +997,7 @@
             this.buttonSST2ADCSTART.TabIndex = 22;
             this.buttonSST2ADCSTART.Text = "START";
             this.buttonSST2ADCSTART.UseVisualStyleBackColor = true;
+            this.buttonSST2ADCSTART.Click += new System.EventHandler(this.ButtonSST2ADCSTART_Click);
             // 
             // buttonSST1ADCSTART
             // 
@@ -999,6 +1007,7 @@
             this.buttonSST1ADCSTART.TabIndex = 20;
             this.buttonSST1ADCSTART.Text = "START";
             this.buttonSST1ADCSTART.UseVisualStyleBackColor = true;
+            this.buttonSST1ADCSTART.Click += new System.EventHandler(this.ButtonSST1ADCSTART_Click);
             // 
             // buttonSST1ADCRESET
             // 
@@ -1008,6 +1017,7 @@
             this.buttonSST1ADCRESET.TabIndex = 19;
             this.buttonSST1ADCRESET.Text = "RESET";
             this.buttonSST1ADCRESET.UseVisualStyleBackColor = true;
+            this.buttonSST1ADCRESET.Click += new System.EventHandler(this.ButtonSST1ADCRESET_Click);
             // 
             // labelSST2TYPEADC
             // 
@@ -1038,7 +1048,7 @@
             "5%",
             "25%",
             "30%"});
-            this.comboBoxCDRADCCHANGE.Location = new System.Drawing.Point(52, 42);
+            this.comboBoxCDRADCCHANGE.Location = new System.Drawing.Point(50, 42);
             this.comboBoxCDRADCCHANGE.Name = "comboBoxCDRADCCHANGE";
             this.comboBoxCDRADCCHANGE.Size = new System.Drawing.Size(53, 27);
             this.comboBoxCDRADCCHANGE.TabIndex = 15;
@@ -1054,6 +1064,7 @@
             this.checkBoxSHOESADC.TabIndex = 13;
             this.checkBoxSHOESADC.Text = "Shoes";
             this.checkBoxSHOESADC.UseVisualStyleBackColor = true;
+            this.checkBoxSHOESADC.CheckedChanged += new System.EventHandler(this.CheckBoxSHOESADC_CheckedChanged);
             // 
             // labelSST2ADCTIME
             // 
@@ -1099,6 +1110,7 @@
             this.labelCDRPERCENTADC.Size = new System.Drawing.Size(32, 19);
             this.labelCDRPERCENTADC.TabIndex = 5;
             this.labelCDRPERCENTADC.Text = "0%";
+            this.labelCDRPERCENTADC.TextChanged += new System.EventHandler(this.LabelCDRPERCENTADC_TextChanged);
             this.labelCDRPERCENTADC.DoubleClick += new System.EventHandler(this.LabelCDRPERCENTADC_DoubleClick);
             // 
             // labelCDRADC
@@ -1185,6 +1197,7 @@
             this.buttonSST2SUPPORTRESET.TabIndex = 21;
             this.buttonSST2SUPPORTRESET.Text = "RESET";
             this.buttonSST2SUPPORTRESET.UseVisualStyleBackColor = true;
+            this.buttonSST2SUPPORTRESET.Click += new System.EventHandler(this.ButtonSST2SUPPORTRESET_Click);
             // 
             // buttonSST2SUPPORTSTART
             // 
@@ -1194,6 +1207,7 @@
             this.buttonSST2SUPPORTSTART.TabIndex = 22;
             this.buttonSST2SUPPORTSTART.Text = "START";
             this.buttonSST2SUPPORTSTART.UseVisualStyleBackColor = true;
+            this.buttonSST2SUPPORTSTART.Click += new System.EventHandler(this.ButtonSST2SUPPORTSTART_Click);
             // 
             // buttonSST1SUPPORTSTART
             // 
@@ -1203,6 +1217,7 @@
             this.buttonSST1SUPPORTSTART.TabIndex = 20;
             this.buttonSST1SUPPORTSTART.Text = "START";
             this.buttonSST1SUPPORTSTART.UseVisualStyleBackColor = true;
+            this.buttonSST1SUPPORTSTART.Click += new System.EventHandler(this.ButtonSST1SUPPORTSTART_Click);
             // 
             // buttonSST1SUPPORTRESET
             // 
@@ -1212,6 +1227,7 @@
             this.buttonSST1SUPPORTRESET.TabIndex = 19;
             this.buttonSST1SUPPORTRESET.Text = "RESET";
             this.buttonSST1SUPPORTRESET.UseVisualStyleBackColor = true;
+            this.buttonSST1SUPPORTRESET.Click += new System.EventHandler(this.ButtonSST1SUPPORTRESET_Click);
             // 
             // labelSST2TYPESUPPORT
             // 
@@ -1242,7 +1258,7 @@
             "5%",
             "25%",
             "30%"});
-            this.comboBoxCDRSUPPORTCHANGE.Location = new System.Drawing.Point(52, 38);
+            this.comboBoxCDRSUPPORTCHANGE.Location = new System.Drawing.Point(50, 38);
             this.comboBoxCDRSUPPORTCHANGE.Name = "comboBoxCDRSUPPORTCHANGE";
             this.comboBoxCDRSUPPORTCHANGE.Size = new System.Drawing.Size(53, 27);
             this.comboBoxCDRSUPPORTCHANGE.TabIndex = 16;
@@ -1258,6 +1274,7 @@
             this.checkBoxSHOESSUPPORT.TabIndex = 13;
             this.checkBoxSHOESSUPPORT.Text = "Shoes";
             this.checkBoxSHOESSUPPORT.UseVisualStyleBackColor = true;
+            this.checkBoxSHOESSUPPORT.CheckedChanged += new System.EventHandler(this.CheckBoxSHOESSUPPORT_CheckedChanged);
             // 
             // labelSST2SUPPORTTIME
             // 
@@ -1294,6 +1311,7 @@
             this.labelCDRPERCENTSUPPORT.Size = new System.Drawing.Size(32, 19);
             this.labelCDRPERCENTSUPPORT.TabIndex = 6;
             this.labelCDRPERCENTSUPPORT.Text = "0%";
+            this.labelCDRPERCENTSUPPORT.TextChanged += new System.EventHandler(this.LabelCDRPERCENTSUPPORT_TextChanged);
             this.labelCDRPERCENTSUPPORT.DoubleClick += new System.EventHandler(this.LabelCDRPERCENTSUPPORT_DoubleClick);
             // 
             // labelSST1SUPPORT
@@ -1352,26 +1370,32 @@
             // timerSST1MID
             // 
             this.timerSST1MID.Interval = 1000;
+            this.timerSST1MID.Tick += new System.EventHandler(this.TimerSST1MID_Tick);
             // 
             // timerSST2MID
             // 
             this.timerSST2MID.Interval = 1000;
+            this.timerSST2MID.Tick += new System.EventHandler(this.TimerSST2MID_Tick);
             // 
             // timerSST1ADC
             // 
             this.timerSST1ADC.Interval = 1000;
+            this.timerSST1ADC.Tick += new System.EventHandler(this.TimerSST1ADC_Tick);
             // 
             // timerSST2ADC
             // 
             this.timerSST2ADC.Interval = 1000;
+            this.timerSST2ADC.Tick += new System.EventHandler(this.TimerSST2ADC_Tick);
             // 
             // timerSST1SUPPORT
             // 
             this.timerSST1SUPPORT.Interval = 1000;
+            this.timerSST1SUPPORT.Tick += new System.EventHandler(this.TimerSST1SUPPORT_Tick);
             // 
             // timerSST2SUPPORT
             // 
             this.timerSST2SUPPORT.Interval = 1000;
+            this.timerSST2SUPPORT.Tick += new System.EventHandler(this.TimerSST2SUPPORT_Tick);
             // 
             // MainWindow
             // 
