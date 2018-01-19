@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2020
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lol-tim", "lol-tim\lol-tim.csproj", "{3421A668-FB7B-4B92-9A5B-8285EB6E4022}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D89D9864-1412-4887-87BE-858499D36F93}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\beep-07.wav = ..\..\..\Desktop\beep-07.wav
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
